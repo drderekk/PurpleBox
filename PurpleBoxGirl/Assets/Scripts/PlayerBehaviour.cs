@@ -64,7 +64,7 @@ public class PlayerBehaviour : MonoBehaviour
 		printFPS();
 
 		float xInput;
-
+        
 		// Android
 		#if UNITY_ANDROID
 			getButtonDownJump = CrossPlatformInputManager.GetButtonDown("Jump");
@@ -78,7 +78,7 @@ public class PlayerBehaviour : MonoBehaviour
 			getButtonJump = Input.GetButton("Jump");
 			xInput = Input.GetAxisRaw("Horizontal");
 		#endif
-
+        
 		/*
 		 *  Sets the xInput to 0 if the wallJumpTimer is greater than zero
 		 *  (Since the player just jumped from a wall) and the player is
