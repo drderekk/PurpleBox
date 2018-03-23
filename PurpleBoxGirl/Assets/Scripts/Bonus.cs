@@ -12,19 +12,19 @@ public class Bonus : MonoBehaviour {
     public Sprite Sprite2;
     public Sprite Sprite3;
 
-    private Vector2 Pos1;
-    private Vector2 Pos2;
-    private Vector3 Pos3;
+    public Vector2 Pos1;
+    public Vector2 Pos2;
+    public Vector3 Pos3;
 
-    private bool IsPos1;
-    private bool IsPos2;
-    private bool IsPos3;
+    public bool IsPos1;
+    public bool IsPos2;
+    public bool IsPos3;
 
     void Start ()
     {
         Pos1 = gameObject.transform.position;
-        Pos2 = GameObject.Find("Pos2").transform.position;
-        Pos3 = GameObject.Find("Pos3").transform.position;
+        Pos2 = gameObject.transform.Find("Pos2").transform.position;
+        Pos3 = gameObject.transform.Find("Pos3").transform.position;
         LevelManager = FindObjectOfType<LevelManager>();
         Sprite = GetComponent<SpriteRenderer>();
         IsPos1 = true;
@@ -61,9 +61,10 @@ public class Bonus : MonoBehaviour {
             }
             else if (IsPos3)
             {
+                IsPos3 = false;
+                IsPos1 = true;
                 gameObject.SetActive(false);
                 LevelManager.Score = LevelManager.Score + 5;
-                IsPos3 = false;
             }
         }
 
