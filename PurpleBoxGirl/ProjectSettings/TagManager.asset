@@ -19,7 +19,7 @@ TagManager:
   - Player
   - Floor
   - Spikes
-  - 
+  - Pickups
   - 
   - 
   - 
@@ -54,4 +54,7 @@ TagManager:
     locked: 0
   - name: Spikes
     uniqueID: 2196743983
+    locked: 0
+  - name: Pickups
+    uniqueID: 3799840081
     locked: 0

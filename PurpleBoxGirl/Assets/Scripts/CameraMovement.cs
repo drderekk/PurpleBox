@@ -42,7 +42,7 @@ public class CameraMovement : MonoBehaviour {
     public void StartMove ()
     {
         MaxSpeed = 0.1f;
-        MovementSpeed = 0.03f;
+        MovementSpeed = 0.01f;
         MovementIncrease = 0.0005f * Time.deltaTime;
         Move = true;
     }
