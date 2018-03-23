@@ -39,6 +39,12 @@ public class PlayerBehaviour : MonoBehaviour
 	private int wallStickDelay = 5;
 	private int currentWallStickTimer = 0;
 
+	private bool wallWasLeft;
+	private int wallJumpDelay = 8;
+	private int wallJumpTimer = 0;
+
+	float deltaTime = 0;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -51,7 +57,22 @@ public class PlayerBehaviour : MonoBehaviour
 
     void Update()
     {
+		printFPS();
+
 		float xInput = Input.GetAxisRaw("Horizontal");
+
+		/*
+		 *  Sets the xInput to 0 if the wallJumpTimer is greater than zero
+		 *  (Since the player just jumped from a wall) and the player is
+		 *  trying to move towards the wall they just jumped from.
+		 */
+		if(wallJumpTimer > 0){
+			wallJumpTimer--;
+
+			if ((wallWasLeft && xInput < -0.5f) || (!wallWasLeft && xInput > 0.5f)) {
+				xInput = 0f;
+			}
+		}
         
 		DetectCollisions();
 		MovePlayerAlongXAxis(xInput);
@@ -194,11 +215,15 @@ public class PlayerBehaviour : MonoBehaviour
 		if (Input.GetButtonDown("Jump"))
 		{
 			if (OnLeftWall) {
+				wallWasLeft = true;
 				rb.velocity = new Vector2 (JumpSpeed, JumpSpeed);
 			} 
 			else if (OnRightWall) {
+				wallWasLeft = false;
 				rb.velocity = new Vector2 (-JumpSpeed, JumpSpeed);
 			}
+
+			wallJumpTimer = wallJumpDelay;
 
 			rb.gravityScale = DefaultGravity;
 			Audio.PlayJumpSound();
@@ -267,4 +292,15 @@ public class PlayerBehaviour : MonoBehaviour
 		}
 	}
 
+	/*
+	 * Outputs the current FPS to the console every 1 seconds.
+	 */
+	public void printFPS(){
+		deltaTime += (Time.unscaledDeltaTime - deltaTime) * 0.1f;
+
+		if(Time.fixedTime % 1 == 0){
+			Debug.Log ("FPS: "+1.0f / deltaTime);
+		}
+
+	}
 }
