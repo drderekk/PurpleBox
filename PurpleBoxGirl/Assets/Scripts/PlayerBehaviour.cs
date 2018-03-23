@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class PlayerBehaviour : MonoBehaviour
 {
@@ -43,6 +44,9 @@ public class PlayerBehaviour : MonoBehaviour
 	private int wallJumpDelay = 8;
 	private int wallJumpTimer = 0;
 
+	private bool getButtonDownJump;
+	private bool getButtonJump;
+
 	float deltaTime = 0;
 
     void Start()
@@ -59,7 +63,21 @@ public class PlayerBehaviour : MonoBehaviour
     {
 		printFPS();
 
-		float xInput = Input.GetAxisRaw("Horizontal");
+		float xInput;
+
+		// Android
+		#if UNITY_ANDROID
+			getButtonDownJump = CrossPlatformInputManager.GetButtonDown("Jump");
+			getButtonJump = CrossPlatformInputManager.GetButton("Jump");
+			xInput = getMobileXInput();
+		#endif
+
+		// Windows/Linux/Mac
+		#if UNITY_STANDALONE
+			getButtonDownJump = Input.GetButtonDown("Jump");
+			getButtonJump = Input.GetButton("Jump");
+			xInput = Input.GetAxisRaw("Horizontal");
+		#endif
 
 		/*
 		 *  Sets the xInput to 0 if the wallJumpTimer is greater than zero
@@ -77,7 +95,7 @@ public class PlayerBehaviour : MonoBehaviour
 		DetectCollisions();
 		MovePlayerAlongXAxis(xInput);
 
-        if (Input.GetButtonDown("Jump") && GroundTouch)
+		if (getButtonDownJump && GroundTouch)
         {
 			JumpPlayer();
         }
@@ -96,20 +114,32 @@ public class PlayerBehaviour : MonoBehaviour
 	 */
     private void FixedUpdate()
     {
-        if (Input.GetAxisRaw("Horizontal") > 0.5f)
+		float xInput;
+
+		// Android
+		#if UNITY_ANDROID
+			xInput = getMobileXInput();
+		#endif
+
+		// Windows/Linux/Mac
+		#if UNITY_STANDALONE
+			xInput = Input.GetAxisRaw("Horizontal");
+		#endif
+
+		if (xInput > 0.5f)
         {
             LastLookedLeft = false;
         }
-        if (Input.GetAxisRaw("Horizontal") < -0.5f)
+		if (xInput < -0.5f)
         {
             LastLookedLeft = true;
         }
 
-        if (Input.GetAxisRaw("Horizontal") > 0.5 && !RightTouch)
+		if (xInput > 0.5 && !RightTouch)
         {
             Sprite.sprite = RightMove;
         }
-        else if (Input.GetAxisRaw("Horizontal") < -0.5 && !LeftTouch)
+		else if (xInput < -0.5 && !LeftTouch)
         {
             Sprite.sprite = LeftMove;
         }
@@ -212,7 +242,7 @@ public class PlayerBehaviour : MonoBehaviour
 		rb.gravityScale = 0.0f;
 		rb.velocity = new Vector2(0.0f, -0.8f);
 
-		if (Input.GetButtonDown("Jump"))
+		if (getButtonDownJump)
 		{
 			if (OnLeftWall) {
 				wallWasLeft = true;
@@ -276,7 +306,7 @@ public class PlayerBehaviour : MonoBehaviour
 	 */
 	private void SetPlayerGravityAndMaxFallSpeed(){
 		// y axis fall increase
-		if (!GroundTouch && rb.velocity.y < 0 || !GroundTouch && (rb.velocity.y > 0 && !Input.GetButton("Jump")))
+		if (!GroundTouch && rb.velocity.y < 0 || !GroundTouch && (rb.velocity.y > 0 && !getButtonJump))
 		{
 			rb.gravityScale = FallIncrease;
 		}
@@ -302,5 +332,18 @@ public class PlayerBehaviour : MonoBehaviour
 			Debug.Log ("FPS: "+1.0f / deltaTime);
 		}
 
+	}
+
+	public float getMobileXInput(){
+		float xInput = CrossPlatformInputManager.GetAxis("Horizontal")*50;
+
+		if(xInput > 1){
+			xInput = 1;
+		}
+		else if(xInput < -1){
+			xInput = -1;
+		}
+
+		return xInput;
 	}
 }
