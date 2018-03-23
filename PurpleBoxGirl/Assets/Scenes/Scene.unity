@@ -1299,6 +1299,7 @@ MonoBehaviour:
   - {fileID: 1360851204401620, guid: b04d3a363981c48448eee05791939eca, type: 2}
   - {fileID: 1392436729817376, guid: 48483850cb8bab84fb8bce9f1208f6e2, type: 2}
   - {fileID: 1589986090142670, guid: 922262e79a959ab47b57a0cb662df31b, type: 2}
+  - {fileID: 1854762119959946, guid: 3d143e22d57d52748ad85a926f217b9b, type: 2}
   CameraPos: 0
   NextGenerate: 0
   LevelPos: 0
