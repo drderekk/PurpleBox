@@ -31,7 +31,7 @@ public class LevelGenerator : MonoBehaviour {
         {
             CameraPos = Mathf.Round(FindObjectOfType<Camera>().transform.position.x);
 
-            int LevelIndex = UnityEngine.Random.Range(0, 4);
+            int LevelIndex = UnityEngine.Random.Range(0, 5);
 
             if (CameraPos > NextGenerate)
             {

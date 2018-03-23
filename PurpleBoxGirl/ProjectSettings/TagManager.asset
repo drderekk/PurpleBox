@@ -58,3 +58,6 @@ TagManager:
   - name: Pickups
     uniqueID: 3799840081
     locked: 0
+  - name: MobileUIButtons
+    uniqueID: 781633069
+    locked: 0
