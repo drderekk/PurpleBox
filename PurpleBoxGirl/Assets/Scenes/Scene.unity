@@ -1211,6 +1211,8 @@ MonoBehaviour:
   RightAirUp: {fileID: 21300000, guid: 086982cd67e423f46a087702e1bd8a30, type: 3}
   RightAirDown: {fileID: 21300000, guid: 0e37553c3a10e6e43899dfd356edfabd, type: 3}
   RightWallSlide: {fileID: 21300000, guid: 26cf10b7e8309ea41943279621be913a, type: 3}
+  LeftIdleSquish: {fileID: 21300000, guid: 52d0051fd5ee8264a8d87dbcb2818b45, type: 3}
+  RightIdleSquish: {fileID: 21300000, guid: 04b61e18e36d7d84698444c4e439752e, type: 3}
   LastLookedLeft: 0
 --- !u!212 &561182350
 SpriteRenderer:
