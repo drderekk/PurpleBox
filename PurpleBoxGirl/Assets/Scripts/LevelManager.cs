@@ -23,7 +23,10 @@ public class LevelManager : MonoBehaviour {
 
     private CameraMovement CameraMovement;
 
+    private Bonus Bonus;
+
     void Start () {
+        Bonus = FindObjectOfType<Bonus>();
         ScoreDisplayCanvas = GameObject.Find("ScoreTextCanvas");
         RespawnCanvas = GameObject.Find("RespawnCanvas");
         RespawnCanvas.gameObject.SetActive(false);
@@ -75,9 +78,10 @@ public class LevelManager : MonoBehaviour {
         Player.transform.position = LevelStartPoint.transform.position;
 
 		RespawnCanvas.gameObject.SetActive(false);
+        Bonus.Reset();
 
-		// Sets the amount of time the camera should take to return to the start based on its distance from the start
-		float distance = Camera.main.transform.position.x - CameraStartPoint.x;
+        // Sets the amount of time the camera should take to return to the start based on its distance from the start
+        float distance = Camera.main.transform.position.x - CameraStartPoint.x;
 		float timeToReturnToStart = Mathf.Min(0.8f, distance/100f);
 
 		Debug.Log (timeToReturnToStart);

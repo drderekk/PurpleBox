@@ -1192,10 +1192,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1005545715192442, guid: 6ad07170ba4e52e4ebe4bd447718540d, type: 2}
-      propertyPath: m_TagString
-      value: LevelStart
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6ad07170ba4e52e4ebe4bd447718540d, type: 2}
   m_IsPrefabParent: 0

@@ -8,19 +8,19 @@ public class KillPlayer : MonoBehaviour {
     private AudioController Audio;
     public LevelGenerator LevelGenerator;
 
-    
 
     void Start () {
         LevelManager = FindObjectOfType<LevelManager>();
         LevelGenerator = FindObjectOfType<LevelGenerator>();
         Audio = FindObjectOfType<AudioController>();
+
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
 		if (other.name == "Player") {
 			StartCoroutine ("FadeOutMusic");
-			LevelManager.PlayerDeath ();
+			LevelManager.PlayerDeath();
 			Audio.PlayDeathSound();
 		}
 
