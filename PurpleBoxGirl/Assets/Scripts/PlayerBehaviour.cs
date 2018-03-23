@@ -35,6 +35,8 @@ public class PlayerBehaviour : MonoBehaviour
     public Sprite RightAirUp;
     public Sprite RightAirDown;
     public Sprite RightWallSlide;
+	public Sprite LeftIdleSquish;
+	public Sprite RightIdleSquish;
     public bool LastLookedLeft;
 
 	private int wallStickDelay = 5;
@@ -146,10 +148,18 @@ public class PlayerBehaviour : MonoBehaviour
         else if (LastLookedLeft)
         {
             Sprite.sprite = LeftIdle;
+
+			if (Input.GetAxisRaw ("Vertical") < -0.5f) {
+				Sprite.sprite = LeftIdleSquish;
+			}
         }
         else if (!LastLookedLeft)
         {
             Sprite.sprite = RightIdle;
+
+			if (Input.GetAxisRaw ("Vertical") < -0.5f) {
+				Sprite.sprite = RightIdleSquish;
+			}
         }
 
         if (!GroundTouch && rb.velocity.y > 0 && LastLookedLeft)
