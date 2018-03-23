@@ -770,7 +770,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4222090887433360}
   m_Layer: 8
-  m_Name: Level5
+  m_Name: New Prefab
   m_TagString: Level1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
