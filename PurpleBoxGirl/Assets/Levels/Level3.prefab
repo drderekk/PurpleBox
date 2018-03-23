@@ -1210,7 +1210,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1092623683712902}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.88, y: 2.12, z: 0}
+  m_LocalPosition: {x: -8.09, y: -1.77, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4433706472966394}
@@ -1680,7 +1680,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1360851204401620}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 31.655418, y: 0.3138771, z: 0}
+  m_LocalPosition: {x: 42.770134, y: 2.7788377, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4356549404506080}
@@ -3179,6 +3179,12 @@ MonoBehaviour:
   Sprite1: {fileID: 21300000, guid: 79d70e8aebe32fc4892f9e2cd11aec8e, type: 3}
   Sprite2: {fileID: 21300000, guid: 614505086574a0149aa60fcbb4474f11, type: 3}
   Sprite3: {fileID: 21300000, guid: 6aabeb87dca1da344825ff246311fa08, type: 3}
+  Pos1: {x: 0, y: 0}
+  Pos2: {x: 0, y: 0}
+  Pos3: {x: 0, y: 0, z: 0}
+  IsPos1: 0
+  IsPos2: 0
+  IsPos3: 0
 --- !u!114 &114320266599912136
 MonoBehaviour:
   m_ObjectHideFlags: 1
