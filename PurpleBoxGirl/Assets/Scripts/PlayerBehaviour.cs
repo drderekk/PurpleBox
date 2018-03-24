@@ -346,15 +346,6 @@ public class PlayerBehaviour : MonoBehaviour
 	}
 
 	public float getMobileXInput(){
-		float xInput = CrossPlatformInputManager.GetAxis("Horizontal")*50;
-
-		if(xInput > 1){
-			xInput = 1;
-		}
-		else if(xInput < -1){
-			xInput = -1;
-		}
-
-		return xInput;
+		return CrossPlatformInputManager.GetAxis("Horizontal");
 	}
 }
