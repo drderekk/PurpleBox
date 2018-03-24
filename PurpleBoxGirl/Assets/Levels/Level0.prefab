@@ -20,6 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4648564412075942}
   - component: {fileID: 114358090030932290}
+  - component: {fileID: 114065051882557454}
+  - component: {fileID: 114725272185298644}
   m_Layer: 0
   m_Name: Level0
   m_TagString: LevelStart
@@ -1979,6 +1981,22 @@ MonoBehaviour:
   shadowOffset: {x: -0.3, y: -0.1}
   shadowMaterial: {fileID: 2100000, guid: a216dd9f64da08f4aa57ff6505383b5b, type: 2}
   shadowColor: {r: 0.36245662, g: 0.559, b: 0.5258174, a: 0.078}
+--- !u!114 &114065051882557454
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1005545715192442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a8b2ec2e7416c243868fc6588621c8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsToConvert:
+  - {fileID: 4518628768537038}
+  - {fileID: 4142115905817810}
+  thingToReplaceWith: {fileID: 1972399986622108, guid: e68fe9f1ac0b8f644af8aea765b9668e,
+    type: 2}
 --- !u!114 &114109100223711956
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2207,6 +2225,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelManager: {fileID: 0}
   LevelGenerator: {fileID: 0}
+--- !u!114 &114725272185298644
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1005545715192442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a8b2ec2e7416c243868fc6588621c8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsToConvert:
+  - {fileID: 4632606233424310}
+  - {fileID: 4719824091107180}
+  - {fileID: 4275213750607132}
+  - {fileID: 4010391282326504}
+  - {fileID: 4110565949398632}
+  - {fileID: 4762536488609498}
+  - {fileID: 4850843089736398}
+  - {fileID: 4383020954902316}
+  - {fileID: 4136372667663500}
+  - {fileID: 4676329030417208}
+  - {fileID: 4159713680515020}
+  thingToReplaceWith: {fileID: 1280008730959762, guid: 012d129fbca155b4abfcdd506d09296b,
+    type: 2}
 --- !u!114 &114735330573270788
 MonoBehaviour:
   m_ObjectHideFlags: 1
