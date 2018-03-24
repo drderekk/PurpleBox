@@ -66,27 +66,28 @@ public class PlayerBehaviour : MonoBehaviour
 		//printFPS();
 
 		float xInput;
-        
-		// Android
-		#if UNITY_ANDROID
+
+        // Android
+        #if UNITY_ANDROID
 			getButtonDownJump = CrossPlatformInputManager.GetButtonDown("Jump");
 			getButtonJump = CrossPlatformInputManager.GetButton("Jump");
 			xInput = getMobileXInput();
-		#endif
+            Screen.orientation = ScreenOrientation.LandscapeLeft;
+        #endif
 
-		// Windows/Linux/Mac
-		#if UNITY_STANDALONE
+        // Windows/Linux/Mac
+        #if UNITY_STANDALONE
 			getButtonDownJump = Input.GetButtonDown("Jump");
 			getButtonJump = Input.GetButton("Jump");
 			xInput = Input.GetAxisRaw("Horizontal");
-		#endif
-        
-		/*
+        #endif
+
+        /*
 		 *  Sets the xInput to 0 if the wallJumpTimer is greater than zero
 		 *  (Since the player just jumped from a wall) and the player is
 		 *  trying to move towards the wall they just jumped from.
 		 */
-		if(wallJumpTimer > 0){
+        if (wallJumpTimer > 0){
 			wallJumpTimer--;
 
 			if ((wallWasLeft && xInput < -0.5f) || (!wallWasLeft && xInput > 0.5f)) {
