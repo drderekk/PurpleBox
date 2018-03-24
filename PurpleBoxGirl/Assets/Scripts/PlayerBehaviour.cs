@@ -63,7 +63,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     void Update()
     {
-		printFPS();
+		//printFPS();
 
 		float xInput;
         

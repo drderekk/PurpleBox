@@ -17,7 +17,7 @@ public class LevelGenerator : MonoBehaviour {
 	public static int levelWidth = 26;
 
 	private List<int> previouslySeenLevels = new List<int>();
-	private static int numberOfPreviousLevelsToTrack = 6;
+	private static int numberOfPreviousLevelsToTrack = 3;
 
 	void Start () {
 		LevelPos = levelWidth;
@@ -44,11 +44,18 @@ public class LevelGenerator : MonoBehaviour {
 				bool previouslySeen;
 				int LevelIndex;
 
+				int loops = 0;
+
 				/*
 				 * Loops until it finds a level index that isn't stored in
 				 * previouslySeenLevels.
 				 */
 				do {
+					loops++;
+
+					if(loops > 20){
+						break;
+					}
 					previouslySeen = false;
 
 					LevelIndex = UnityEngine.Random.Range (0, LevelList.Count);
@@ -62,7 +69,7 @@ public class LevelGenerator : MonoBehaviour {
 				} while (previouslySeen);
 
 				// Removes the least recent level index from previouslySeenLevels
-				previouslySeenLevels.Remove(0);
+				previouslySeenLevels.RemoveAt(0);
 
 				// Adds the new level index to previouslySeenLevels
 				previouslySeenLevels.Add(LevelIndex);
