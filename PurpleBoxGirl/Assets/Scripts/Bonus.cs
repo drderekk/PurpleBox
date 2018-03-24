@@ -5,6 +5,7 @@ using UnityEngine;
 public class Bonus : MonoBehaviour {
 
     private SpriteRenderer Sprite;
+    private AudioController Audio;
 
     private LevelManager LevelManager;
 
@@ -22,6 +23,7 @@ public class Bonus : MonoBehaviour {
 
     void Start ()
     {
+        Audio = FindObjectOfType<AudioController>();
         Pos1 = gameObject.transform.position;
         Pos2 = gameObject.transform.Find("Pos2").transform.position;
         Pos3 = gameObject.transform.Find("Pos3").transform.position;
@@ -47,6 +49,7 @@ public class Bonus : MonoBehaviour {
         {
             if (IsPos1)
             {
+                Audio.Bonus1.Play();
                 gameObject.transform.position = Pos2;
                 Sprite.sprite = Sprite2;
                 IsPos1 = false;
@@ -54,6 +57,7 @@ public class Bonus : MonoBehaviour {
             }
             else if (IsPos2)
             {
+                Audio.Bonus2.Play();
                 gameObject.transform.position = Pos3;
                 Sprite.sprite = Sprite3;
                 IsPos2 = false;
@@ -61,6 +65,7 @@ public class Bonus : MonoBehaviour {
             }
             else if (IsPos3)
             {
+                Audio.Bonus3.Play();
                 IsPos3 = false;
                 IsPos1 = true;
                 gameObject.SetActive(false);

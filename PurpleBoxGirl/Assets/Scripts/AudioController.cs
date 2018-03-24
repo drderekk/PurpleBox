@@ -8,6 +8,10 @@ public class AudioController : MonoBehaviour
     public AudioSource Death;
     public AudioSource Respawn;
     public AudioSource Jump;
+    public AudioSource Bonus1;
+    public AudioSource Bonus2;
+    public AudioSource Bonus3;
+    public AudioSource MenuButton;
 
     public AudioSource Music;
 
