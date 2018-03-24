@@ -531,9 +531,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4439544094161330}
-  - component: {fileID: 114756767048649318}
-  - component: {fileID: 114185380266953198}
-  - component: {fileID: 114872128925300728}
+  - component: {fileID: 114046010388337584}
   m_Layer: 8
   m_Name: Level4
   m_TagString: Level1
@@ -3000,6 +2998,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelManager: {fileID: 0}
   LevelGenerator: {fileID: 0}
+--- !u!114 &114046010388337584
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1392436729817376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a613039a20c537459158bbfe91c0687, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagsInOrder:
+  - Wall
+  - Spike
+  - Ceiling
+  prefabsInOrder:
+  - {fileID: 1827350971430352, guid: 765752ce74ae106498bbbe5c6b4a207d, type: 2}
+  - {fileID: 1280008730959762, guid: 012d129fbca155b4abfcdd506d09296b, type: 2}
+  - {fileID: 1972399986622108, guid: e68fe9f1ac0b8f644af8aea765b9668e, type: 2}
 --- !u!114 &114057044010571740
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3052,21 +3069,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelManager: {fileID: 0}
   LevelGenerator: {fileID: 0}
---- !u!114 &114185380266953198
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1392436729817376}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a8b2ec2e7416c243868fc6588621c8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectsToConvert:
-  - {fileID: 4576898806672756}
-  thingToReplaceWith: {fileID: 1972399986622108, guid: e68fe9f1ac0b8f644af8aea765b9668e,
-    type: 2}
 --- !u!114 &114226603703344770
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3288,29 +3290,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelManager: {fileID: 0}
   LevelGenerator: {fileID: 0}
---- !u!114 &114756767048649318
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1392436729817376}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a8b2ec2e7416c243868fc6588621c8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectsToConvert:
-  - {fileID: 4968068513992044}
-  - {fileID: 4062879375892576}
-  - {fileID: 4666639569417804}
-  - {fileID: 4131138980240422}
-  - {fileID: 4753633988586372}
-  - {fileID: 4324849053848438}
-  - {fileID: 4371626996596240}
-  - {fileID: 4446512602058488}
-  - {fileID: 4184668313101096}
-  thingToReplaceWith: {fileID: 1827350971430352, guid: 765752ce74ae106498bbbe5c6b4a207d,
-    type: 2}
 --- !u!114 &114769335923260854
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3435,64 +3414,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelManager: {fileID: 0}
   LevelGenerator: {fileID: 0}
---- !u!114 &114872128925300728
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1392436729817376}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a8b2ec2e7416c243868fc6588621c8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectsToConvert:
-  - {fileID: 4355948739943560}
-  - {fileID: 4682155247249224}
-  - {fileID: 4185724671572278}
-  - {fileID: 4704781154772076}
-  - {fileID: 4721370949130976}
-  - {fileID: 4209323792619060}
-  - {fileID: 4331586393987054}
-  - {fileID: 4350747289707250}
-  - {fileID: 4326427265472330}
-  - {fileID: 4624868164924218}
-  - {fileID: 4020149398491306}
-  - {fileID: 4670733195911830}
-  - {fileID: 4731928850801856}
-  - {fileID: 4525763098570018}
-  - {fileID: 4909678523424608}
-  - {fileID: 4056527557233890}
-  - {fileID: 4013638893755738}
-  - {fileID: 4531712790296150}
-  - {fileID: 4518810769021418}
-  - {fileID: 4225157983996684}
-  - {fileID: 4818219028194634}
-  - {fileID: 4520978200270914}
-  - {fileID: 4426015288054512}
-  - {fileID: 4167948847895296}
-  - {fileID: 4918378100125084}
-  - {fileID: 4891004420778136}
-  - {fileID: 4610362487131198}
-  - {fileID: 4997692776276984}
-  - {fileID: 4537397148225652}
-  - {fileID: 4412042292062218}
-  - {fileID: 4049450336713248}
-  - {fileID: 4035240085567484}
-  - {fileID: 4234700890952606}
-  - {fileID: 4773557145225332}
-  - {fileID: 4641009790369084}
-  - {fileID: 4818319928683622}
-  - {fileID: 4690500865501626}
-  - {fileID: 4931397754049080}
-  - {fileID: 4437105875787626}
-  - {fileID: 4894014058882046}
-  - {fileID: 4093554704636714}
-  - {fileID: 4813549045462682}
-  - {fileID: 4273140814804482}
-  - {fileID: 4160585948238144}
-  thingToReplaceWith: {fileID: 1280008730959762, guid: 012d129fbca155b4abfcdd506d09296b,
-    type: 2}
 --- !u!114 &114882180747961248
 MonoBehaviour:
   m_ObjectHideFlags: 1

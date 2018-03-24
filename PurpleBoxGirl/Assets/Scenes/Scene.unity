@@ -1527,7 +1527,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c5beff2688d14848bfc8155aca4f577, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shadowOffset: {x: -0.3, y: -0.1}
+  shadowOffset: {x: 0.3, y: -0.1}
   shadowMaterial: {fileID: 2100000, guid: a216dd9f64da08f4aa57ff6505383b5b, type: 2}
   shadowColor: {r: 0.36245662, g: 0.559, b: 0.5258174, a: 0.078}
   updatePosition: 1
@@ -1566,6 +1566,7 @@ MonoBehaviour:
   - {fileID: 1077083353378112, guid: 19b240735b50ec2449f46431e00b9555, type: 2}
   - {fileID: 1854762119959946, guid: 3d143e22d57d52748ad85a926f217b9b, type: 2}
   - {fileID: 1866969874033890, guid: 6f674462ec56ef64c9f2ed17669679a1, type: 2}
+  - {fileID: 1360944511877356, guid: 58d1c6dfa94b010478e97dedd1af2ac6, type: 2}
   CameraPos: 0
   NextGenerate: 0
   LevelPos: 0
@@ -3517,7 +3518,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22400000, guid: 2169821f0567671499a5c10104c69c24, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 22400000, guid: 2169821f0567671499a5c10104c69c24, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -4138,7 +4139,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2009194602
 GameObject:

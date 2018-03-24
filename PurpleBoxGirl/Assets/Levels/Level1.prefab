@@ -1019,9 +1019,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4775547069917964}
-  - component: {fileID: 114669522631868006}
-  - component: {fileID: 114088351699547496}
-  - component: {fileID: 114374911809987330}
+  - component: {fileID: 114888121536119000}
   m_Layer: 8
   m_Name: Level1
   m_TagString: Level1
@@ -3087,21 +3085,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelManager: {fileID: 0}
   LevelGenerator: {fileID: 0}
---- !u!114 &114088351699547496
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1948388999344588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a8b2ec2e7416c243868fc6588621c8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectsToConvert:
-  - {fileID: 4187613541918472}
-  thingToReplaceWith: {fileID: 1972399986622108, guid: e68fe9f1ac0b8f644af8aea765b9668e,
-    type: 2}
 --- !u!114 &114102507258613280
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3291,54 +3274,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelManager: {fileID: 0}
   LevelGenerator: {fileID: 0}
---- !u!114 &114374911809987330
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1948388999344588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a8b2ec2e7416c243868fc6588621c8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectsToConvert:
-  - {fileID: 4094076448884686}
-  - {fileID: 4922993527640392}
-  - {fileID: 4714303534078442}
-  - {fileID: 4192934984656030}
-  - {fileID: 4095111161249468}
-  - {fileID: 4758291569359050}
-  - {fileID: 4580300873904746}
-  - {fileID: 4290739385479806}
-  - {fileID: 4981291065026236}
-  - {fileID: 4552097484412984}
-  - {fileID: 4298775024418462}
-  - {fileID: 4924458704850586}
-  - {fileID: 4057621802838200}
-  - {fileID: 4042577091428724}
-  - {fileID: 4151398105551350}
-  - {fileID: 4097966591597678}
-  - {fileID: 4894730825409764}
-  - {fileID: 4833793806558226}
-  - {fileID: 4953010043514258}
-  - {fileID: 4695672485640120}
-  - {fileID: 4797065584373782}
-  - {fileID: 4220239446302604}
-  - {fileID: 4473408622327496}
-  - {fileID: 4988725787137950}
-  - {fileID: 4398438560534922}
-  - {fileID: 4650693523723730}
-  - {fileID: 4999468539570960}
-  - {fileID: 4133546488972612}
-  - {fileID: 4818685243286826}
-  - {fileID: 4950833357622786}
-  - {fileID: 4031002875572204}
-  - {fileID: 4668805494045180}
-  - {fileID: 4502550719944694}
-  - {fileID: 4050402365605826}
-  thingToReplaceWith: {fileID: 1280008730959762, guid: 012d129fbca155b4abfcdd506d09296b,
-    type: 2}
 --- !u!114 &114399455728512276
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3417,40 +3352,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelManager: {fileID: 0}
   LevelGenerator: {fileID: 0}
---- !u!114 &114669522631868006
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1948388999344588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a8b2ec2e7416c243868fc6588621c8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectsToConvert:
-  - {fileID: 4603126255698510}
-  - {fileID: 4702725230627622}
-  - {fileID: 4743891693973216}
-  - {fileID: 4534972319018060}
-  - {fileID: 4871616570026848}
-  - {fileID: 4884110632759750}
-  - {fileID: 4572539595715132}
-  - {fileID: 4971030136809266}
-  - {fileID: 4512428067933004}
-  - {fileID: 4969866964097218}
-  - {fileID: 4795783042809766}
-  - {fileID: 4523580627431038}
-  - {fileID: 4973845753889610}
-  - {fileID: 4101318018012336}
-  - {fileID: 4099157999652598}
-  - {fileID: 4653121283620758}
-  - {fileID: 4905401913150126}
-  - {fileID: 4839073786855934}
-  - {fileID: 4191560993602664}
-  - {fileID: 4332323957800334}
-  thingToReplaceWith: {fileID: 1827350971430352, guid: 765752ce74ae106498bbbe5c6b4a207d,
-    type: 2}
 --- !u!114 &114724913815051530
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3516,6 +3417,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelManager: {fileID: 0}
   LevelGenerator: {fileID: 0}
+--- !u!114 &114888121536119000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1948388999344588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a613039a20c537459158bbfe91c0687, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagsInOrder:
+  - Wall
+  - Spike
+  - Ceiling
+  prefabsInOrder:
+  - {fileID: 1827350971430352, guid: 765752ce74ae106498bbbe5c6b4a207d, type: 2}
+  - {fileID: 1280008730959762, guid: 012d129fbca155b4abfcdd506d09296b, type: 2}
+  - {fileID: 1972399986622108, guid: e68fe9f1ac0b8f644af8aea765b9668e, type: 2}
 --- !u!114 &114914875308925446
 MonoBehaviour:
   m_ObjectHideFlags: 1

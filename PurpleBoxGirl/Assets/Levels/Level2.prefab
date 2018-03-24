@@ -731,9 +731,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4900022016020484}
-  - component: {fileID: 114609331565432528}
-  - component: {fileID: 114149928503374538}
-  - component: {fileID: 114729581885733680}
+  - component: {fileID: 114673738265223802}
   m_Layer: 8
   m_Name: Level2
   m_TagString: Level1
@@ -2599,21 +2597,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelManager: {fileID: 0}
   LevelGenerator: {fileID: 0}
---- !u!114 &114149928503374538
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1760654113594410}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a8b2ec2e7416c243868fc6588621c8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectsToConvert:
-  - {fileID: 4888088863414522}
-  thingToReplaceWith: {fileID: 1972399986622108, guid: e68fe9f1ac0b8f644af8aea765b9668e,
-    type: 2}
 --- !u!114 &114192875753876278
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2744,41 +2727,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelManager: {fileID: 0}
   LevelGenerator: {fileID: 0}
---- !u!114 &114609331565432528
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1760654113594410}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a8b2ec2e7416c243868fc6588621c8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectsToConvert:
-  - {fileID: 4363789756268600}
-  - {fileID: 4267255899157286}
-  - {fileID: 4923106784207140}
-  - {fileID: 4518050696672544}
-  - {fileID: 4087004069045200}
-  - {fileID: 4752904341209524}
-  - {fileID: 4117815220242040}
-  - {fileID: 4977787591143774}
-  - {fileID: 4405245649756698}
-  - {fileID: 4695823670473382}
-  - {fileID: 4686420122494562}
-  - {fileID: 4506859853394296}
-  - {fileID: 4336222270749570}
-  - {fileID: 4416951951796872}
-  - {fileID: 4920269905198348}
-  - {fileID: 4659629030366386}
-  - {fileID: 4842621776734372}
-  - {fileID: 4757562177939806}
-  - {fileID: 4983149184653122}
-  - {fileID: 4507668013285834}
-  - {fileID: 4611285500019280}
-  thingToReplaceWith: {fileID: 1827350971430352, guid: 765752ce74ae106498bbbe5c6b4a207d,
-    type: 2}
 --- !u!114 &114610895006662252
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2818,6 +2766,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelManager: {fileID: 0}
   LevelGenerator: {fileID: 0}
+--- !u!114 &114673738265223802
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1760654113594410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a613039a20c537459158bbfe91c0687, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagsInOrder:
+  - Wall
+  - Spike
+  - Ceiling
+  prefabsInOrder:
+  - {fileID: 1827350971430352, guid: 765752ce74ae106498bbbe5c6b4a207d, type: 2}
+  - {fileID: 1280008730959762, guid: 012d129fbca155b4abfcdd506d09296b, type: 2}
+  - {fileID: 1972399986622108, guid: e68fe9f1ac0b8f644af8aea765b9668e, type: 2}
 --- !u!114 &114716571031647002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2844,44 +2811,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelManager: {fileID: 0}
   LevelGenerator: {fileID: 0}
---- !u!114 &114729581885733680
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1760654113594410}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a8b2ec2e7416c243868fc6588621c8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectsToConvert:
-  - {fileID: 4040170525551828}
-  - {fileID: 4228366806980978}
-  - {fileID: 4257522197926718}
-  - {fileID: 4916219552723996}
-  - {fileID: 4262129203265116}
-  - {fileID: 4494969239755502}
-  - {fileID: 4957211217940602}
-  - {fileID: 4178335779087834}
-  - {fileID: 4910198680890832}
-  - {fileID: 4512071801105010}
-  - {fileID: 4687886194246380}
-  - {fileID: 4527156609564178}
-  - {fileID: 4917940014475850}
-  - {fileID: 4086352862076872}
-  - {fileID: 4646165636385026}
-  - {fileID: 4219842636430388}
-  - {fileID: 4000660513524058}
-  - {fileID: 4122271363518144}
-  - {fileID: 4729953388380882}
-  - {fileID: 4246355522004868}
-  - {fileID: 4504710836495700}
-  - {fileID: 4990567672987362}
-  - {fileID: 4288901350334666}
-  - {fileID: 4118567957544928}
-  thingToReplaceWith: {fileID: 1280008730959762, guid: 012d129fbca155b4abfcdd506d09296b,
-    type: 2}
 --- !u!114 &114758672249996678
 MonoBehaviour:
   m_ObjectHideFlags: 1
