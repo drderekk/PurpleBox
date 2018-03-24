@@ -6,7 +6,7 @@ public class LevelGenerator : MonoBehaviour {
 
     public List<GameObject> LevelList = new List<GameObject>();
 
-    public float CameraPos;
+    public Camera mainCamera;
 
     public int NextGenerate;
 
@@ -37,7 +37,7 @@ public class LevelGenerator : MonoBehaviour {
         }
         else
         {
-            CameraPos = Mathf.Round(FindObjectOfType<Camera>().transform.position.x);
+			float CameraPos = Mathf.Round(mainCamera.transform.position.x);
 
             if (CameraPos > NextGenerate)
             {

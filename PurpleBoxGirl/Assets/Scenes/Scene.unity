@@ -553,7 +553,7 @@ Transform:
   - {fileID: 1059987227}
   - {fileID: 196093203}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &160360307
 GameObject:
@@ -993,7 +993,7 @@ RectTransform:
   m_Children:
   - {fileID: 1062709312}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1514,7 +1514,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &561182352
 MonoBehaviour:
@@ -1542,7 +1542,7 @@ GameObject:
   - component: {fileID: 660371470}
   m_Layer: 0
   m_Name: LevelGenerator
-  m_TagString: Untagged
+  m_TagString: LevelGenerator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1568,7 +1568,7 @@ MonoBehaviour:
   - {fileID: 1866969874033890, guid: 6f674462ec56ef64c9f2ed17669679a1, type: 2}
   - {fileID: 1360944511877356, guid: 58d1c6dfa94b010478e97dedd1af2ac6, type: 2}
   - {fileID: 1296273320145396, guid: 70130c6a0eb1b3a49ac29ad26f7f9a2c, type: 2}
-  CameraPos: 0
+  mainCamera: {fileID: 2009194605}
   NextGenerate: 0
   LevelPos: 0
   Restart: 0
@@ -1584,7 +1584,7 @@ Transform:
   m_Children:
   - {fileID: 1548138305}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &671656982
 GameObject:
@@ -1776,7 +1776,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &731063559
 GameObject:
@@ -3214,7 +3214,7 @@ GameObject:
   - component: {fileID: 1233069309}
   m_Layer: 0
   m_Name: AudioController
-  m_TagString: Untagged
+  m_TagString: AudioController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3519,7 +3519,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22400000, guid: 2169821f0567671499a5c10104c69c24, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22400000, guid: 2169821f0567671499a5c10104c69c24, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -3828,7 +3828,7 @@ GameObject:
   - component: {fileID: 1786756450}
   m_Layer: 0
   m_Name: LevelManager
-  m_TagString: Untagged
+  m_TagString: LevelManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3861,7 +3861,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1830413365
 GameObject:
@@ -4224,7 +4224,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2009194607
 MonoBehaviour:

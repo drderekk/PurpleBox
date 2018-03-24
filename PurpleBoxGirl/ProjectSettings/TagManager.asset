@@ -9,6 +9,9 @@ TagManager:
   - Wall
   - Spike
   - Ceiling
+  - LevelManager
+  - LevelGenerator
+  - AudioController
   layers:
   - Default
   - TransparentFX

@@ -10,10 +10,9 @@ public class KillPlayer : MonoBehaviour {
 
 
     void Start () {
-        LevelManager = FindObjectOfType<LevelManager>();
-        LevelGenerator = FindObjectOfType<LevelGenerator>();
-        Audio = FindObjectOfType<AudioController>();
-
+		LevelManager = GameObject.FindGameObjectWithTag("LevelManager").GetComponent<LevelManager>();
+		LevelGenerator = GameObject.FindGameObjectWithTag("LevelGenerator").GetComponent<LevelGenerator>();
+		Audio =  GameObject.FindGameObjectWithTag("AudioController").GetComponent<AudioController>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
