@@ -73,7 +73,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c5beff2688d14848bfc8155aca4f577, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shadowOffset: {x: -0.3, y: -0.1}
+  shadowOffset: {x: 0.3, y: -0.1}
   shadowMaterial: {fileID: 2100000, guid: a216dd9f64da08f4aa57ff6505383b5b, type: 2}
   shadowColor: {r: 0.36245662, g: 0.559, b: 0.5258174, a: 0.078}
 --- !u!212 &212091788766022782

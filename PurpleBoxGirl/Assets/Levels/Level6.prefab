@@ -1109,6 +1109,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4959118574957866}
+  - component: {fileID: 114510172982403476}
+  - component: {fileID: 114032220715817412}
+  - component: {fileID: 114614861105322700}
   m_Layer: 8
   m_Name: Level6
   m_TagString: Level1
@@ -3632,6 +3635,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelManager: {fileID: 0}
   LevelGenerator: {fileID: 0}
+--- !u!114 &114032220715817412
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1854762119959946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a8b2ec2e7416c243868fc6588621c8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsToConvert:
+  - {fileID: 4291478915825572}
+  thingToReplaceWith: {fileID: 1972399986622108, guid: e68fe9f1ac0b8f644af8aea765b9668e,
+    type: 2}
 --- !u!114 &114078234132663412
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3938,6 +3956,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelManager: {fileID: 0}
   LevelGenerator: {fileID: 0}
+--- !u!114 &114510172982403476
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1854762119959946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a8b2ec2e7416c243868fc6588621c8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsToConvert:
+  - {fileID: 4618940925639542}
+  - {fileID: 4101925707811356}
+  - {fileID: 4040188266085862}
+  - {fileID: 4111667135574820}
+  - {fileID: 4157395939487986}
+  - {fileID: 4261907258219060}
+  - {fileID: 4547139739018490}
+  - {fileID: 4727247749992528}
+  - {fileID: 4067966620463160}
+  - {fileID: 4438359058336530}
+  - {fileID: 4097718525393952}
+  - {fileID: 4425056683649796}
+  - {fileID: 4224198475045658}
+  - {fileID: 4853293925282736}
+  - {fileID: 4343044681014924}
+  - {fileID: 4281174967319856}
+  - {fileID: 4761964164107944}
+  - {fileID: 4011751762983984}
+  - {fileID: 4307596833826268}
+  - {fileID: 4636812624186244}
+  thingToReplaceWith: {fileID: 1827350971430352, guid: 765752ce74ae106498bbbe5c6b4a207d,
+    type: 2}
 --- !u!114 &114516381107458224
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3977,6 +4029,66 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelManager: {fileID: 0}
   LevelGenerator: {fileID: 0}
+--- !u!114 &114614861105322700
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1854762119959946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a8b2ec2e7416c243868fc6588621c8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsToConvert:
+  - {fileID: 4955026773696060}
+  - {fileID: 4391161326348818}
+  - {fileID: 4162442382405418}
+  - {fileID: 4551588662739406}
+  - {fileID: 4820823528672098}
+  - {fileID: 4361893631186466}
+  - {fileID: 4931464625749678}
+  - {fileID: 4401511732605226}
+  - {fileID: 4039143929447154}
+  - {fileID: 4150808781365034}
+  - {fileID: 4909659330542598}
+  - {fileID: 4827885330302294}
+  - {fileID: 4691062092893306}
+  - {fileID: 4838966534802398}
+  - {fileID: 4468039898627800}
+  - {fileID: 4175588575594192}
+  - {fileID: 4532630971903120}
+  - {fileID: 4075846638310614}
+  - {fileID: 4543910478974612}
+  - {fileID: 4934538493038890}
+  - {fileID: 4774254076433834}
+  - {fileID: 4885030412931872}
+  - {fileID: 4696016293888008}
+  - {fileID: 4954333151257696}
+  - {fileID: 4658117282183366}
+  - {fileID: 4614896338227230}
+  - {fileID: 4680487991664680}
+  - {fileID: 4986035748114610}
+  - {fileID: 4602680546486676}
+  - {fileID: 4188293719094292}
+  - {fileID: 4637553872137870}
+  - {fileID: 4555372078657354}
+  - {fileID: 4927774234383472}
+  - {fileID: 4174096444661978}
+  - {fileID: 4203287265766964}
+  - {fileID: 4010919898443202}
+  - {fileID: 4802116822672482}
+  - {fileID: 4806328316304030}
+  - {fileID: 4686273098333098}
+  - {fileID: 4507826224875694}
+  - {fileID: 4283178677291310}
+  - {fileID: 4053217363129718}
+  - {fileID: 4878663197197482}
+  - {fileID: 4173889878097696}
+  - {fileID: 4457437500523526}
+  - {fileID: 4348243333105784}
+  thingToReplaceWith: {fileID: 1280008730959762, guid: 012d129fbca155b4abfcdd506d09296b,
+    type: 2}
 --- !u!114 &114620739959604704
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -45,7 +45,7 @@ public class SpriteShadow : MonoBehaviour {
 		shadowOffset.y = (transformCaster.position.y - cameraPos.y)/10f;
 		*/
 		transformShadow.position = new Vector2 (transformCaster.position.x + shadowOffset.x, transformCaster.position.y + shadowOffset.y);
-		transformShadow.localScale = new Vector3(1.2f,1.2f,0f);
+		transformShadow.localScale = new Vector3(1f,1.1f,0f);
 		sprRndShadow.sprite = sprRndCaster.sprite;
 	}
 }
