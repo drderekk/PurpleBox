@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Level1
   - LevelStart
+  - Wall
+  - Spike
+  - Ceiling
   layers:
   - Default
   - TransparentFX

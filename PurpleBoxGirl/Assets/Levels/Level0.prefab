@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 114358090030932290}
   - component: {fileID: 114065051882557454}
   - component: {fileID: 114725272185298644}
+  - component: {fileID: 114212660370824480}
   m_Layer: 0
   m_Name: Level0
   m_TagString: LevelStart
@@ -42,7 +43,7 @@ GameObject:
   - component: {fileID: 114682536728681232}
   m_Layer: 10
   m_Name: Wall (2)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -59,7 +60,7 @@ GameObject:
   - component: {fileID: 68009617257152290}
   m_Layer: 10
   m_Name: Ceiling
-  m_TagString: Untagged
+  m_TagString: Ceiling
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -76,7 +77,7 @@ GameObject:
   - component: {fileID: 68205295875786084}
   m_Layer: 10
   m_Name: Ceiling (1)
-  m_TagString: Untagged
+  m_TagString: Ceiling
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -94,7 +95,7 @@ GameObject:
   - component: {fileID: 68544066977857082}
   m_Layer: 11
   m_Name: Spike (3)
-  m_TagString: Untagged
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -127,7 +128,7 @@ GameObject:
   - component: {fileID: 68245206320228292}
   m_Layer: 10
   m_Name: Wall (30)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -145,7 +146,7 @@ GameObject:
   - component: {fileID: 68246424770282050}
   m_Layer: 11
   m_Name: Spike (7)
-  m_TagString: Untagged
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -163,7 +164,7 @@ GameObject:
   - component: {fileID: 68733144281453224}
   m_Layer: 11
   m_Name: Spike (5)
-  m_TagString: Untagged
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -181,7 +182,7 @@ GameObject:
   - component: {fileID: 68283543025055878}
   m_Layer: 11
   m_Name: Spike (2)
-  m_TagString: Untagged
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -199,7 +200,7 @@ GameObject:
   - component: {fileID: 114000908394967006}
   m_Layer: 10
   m_Name: Wall (5)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -216,7 +217,7 @@ GameObject:
   - component: {fileID: 68953466913190586}
   m_Layer: 10
   m_Name: Wall (24)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -250,7 +251,7 @@ GameObject:
   - component: {fileID: 114196250206994618}
   m_Layer: 10
   m_Name: Wall (8)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -268,7 +269,7 @@ GameObject:
   - component: {fileID: 68392291280668220}
   m_Layer: 11
   m_Name: Spike (10)
-  m_TagString: Untagged
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -286,7 +287,7 @@ GameObject:
   - component: {fileID: 114790657451962146}
   m_Layer: 10
   m_Name: Wall (3)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -304,7 +305,7 @@ GameObject:
   - component: {fileID: 114957128230397578}
   m_Layer: 10
   m_Name: Wall (11)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -322,7 +323,7 @@ GameObject:
   - component: {fileID: 114274292112742452}
   m_Layer: 10
   m_Name: Wall (7)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -355,7 +356,7 @@ GameObject:
   - component: {fileID: 68631319178170472}
   m_Layer: 11
   m_Name: Spike (12)
-  m_TagString: Untagged
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -373,7 +374,7 @@ GameObject:
   - component: {fileID: 114936708812965684}
   m_Layer: 10
   m_Name: Wall (10)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -390,7 +391,7 @@ GameObject:
   - component: {fileID: 68542315638533688}
   m_Layer: 10
   m_Name: Wall (32)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -408,7 +409,7 @@ GameObject:
   - component: {fileID: 114897373211446116}
   m_Layer: 10
   m_Name: Wall (1)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -426,7 +427,7 @@ GameObject:
   - component: {fileID: 68783825241797736}
   m_Layer: 11
   m_Name: Spike (11)
-  m_TagString: Untagged
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -461,7 +462,7 @@ GameObject:
   - component: {fileID: 114716781619017440}
   m_Layer: 10
   m_Name: Wall (6)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -478,7 +479,7 @@ GameObject:
   - component: {fileID: 68266196767445232}
   m_Layer: 10
   m_Name: Wall (31)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -496,7 +497,7 @@ GameObject:
   - component: {fileID: 68259058718801020}
   m_Layer: 11
   m_Name: Spike (6)
-  m_TagString: Untagged
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -514,7 +515,7 @@ GameObject:
   - component: {fileID: 114027238117943642}
   m_Layer: 10
   m_Name: Wall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -532,7 +533,7 @@ GameObject:
   - component: {fileID: 114628880254761600}
   m_Layer: 10
   m_Name: Wall (9)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -550,7 +551,7 @@ GameObject:
   - component: {fileID: 68838241047116930}
   m_Layer: 11
   m_Name: Spike (4)
-  m_TagString: Untagged
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -568,7 +569,7 @@ GameObject:
   - component: {fileID: 68177742118912796}
   m_Layer: 11
   m_Name: Spike (9)
-  m_TagString: Untagged
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -604,7 +605,7 @@ GameObject:
   - component: {fileID: 114913233297643720}
   m_Layer: 10
   m_Name: Wall (12)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -636,7 +637,7 @@ GameObject:
   - component: {fileID: 68880492284371686}
   m_Layer: 10
   m_Name: Wall (22)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -654,7 +655,7 @@ GameObject:
   - component: {fileID: 114684757182142686}
   m_Layer: 10
   m_Name: Wall (4)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -688,7 +689,7 @@ GameObject:
   - component: {fileID: 68239805339865634}
   m_Layer: 10
   m_Name: Wall (21)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -706,7 +707,7 @@ GameObject:
   - component: {fileID: 68039092991346086}
   m_Layer: 11
   m_Name: Spike (13)
-  m_TagString: Untagged
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1058,7 +1059,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1005545715192442}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 52.52551, y: 9.186178, z: 0.19140625}
+  m_LocalPosition: {x: 87.77873, y: 25.922947, z: 0.19140625}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4529921658895580}
@@ -1967,6 +1968,7 @@ MonoBehaviour:
   shadowOffset: {x: -0.3, y: -0.1}
   shadowMaterial: {fileID: 2100000, guid: a216dd9f64da08f4aa57ff6505383b5b, type: 2}
   shadowColor: {r: 0.36245662, g: 0.559, b: 0.5258174, a: 0.078}
+  updatePosition: 1
 --- !u!114 &114027238117943642
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1981,13 +1983,14 @@ MonoBehaviour:
   shadowOffset: {x: -0.3, y: -0.1}
   shadowMaterial: {fileID: 2100000, guid: a216dd9f64da08f4aa57ff6505383b5b, type: 2}
   shadowColor: {r: 0.36245662, g: 0.559, b: 0.5258174, a: 0.078}
+  updatePosition: 1
 --- !u!114 &114065051882557454
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1005545715192442}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0a8b2ec2e7416c243868fc6588621c8d, type: 3}
   m_Name: 
@@ -2024,6 +2027,26 @@ MonoBehaviour:
   shadowOffset: {x: -0.3, y: -0.1}
   shadowMaterial: {fileID: 2100000, guid: a216dd9f64da08f4aa57ff6505383b5b, type: 2}
   shadowColor: {r: 0.36245662, g: 0.559, b: 0.5258174, a: 0.078}
+  updatePosition: 1
+--- !u!114 &114212660370824480
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1005545715192442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a613039a20c537459158bbfe91c0687, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagsInOrder:
+  - Wall
+  - Spike
+  - Ceiling
+  prefabsInOrder:
+  - {fileID: 1827350971430352, guid: 765752ce74ae106498bbbe5c6b4a207d, type: 2}
+  - {fileID: 1280008730959762, guid: 012d129fbca155b4abfcdd506d09296b, type: 2}
+  - {fileID: 1972399986622108, guid: e68fe9f1ac0b8f644af8aea765b9668e, type: 2}
 --- !u!114 &114258896068128366
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2051,6 +2074,7 @@ MonoBehaviour:
   shadowOffset: {x: -0.3, y: -0.1}
   shadowMaterial: {fileID: 2100000, guid: a216dd9f64da08f4aa57ff6505383b5b, type: 2}
   shadowColor: {r: 0.36245662, g: 0.559, b: 0.5258174, a: 0.078}
+  updatePosition: 1
 --- !u!114 &114283650112645846
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2083,7 +2107,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1005545715192442}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0a8b2ec2e7416c243868fc6588621c8d, type: 3}
   m_Name: 
@@ -2150,6 +2174,7 @@ MonoBehaviour:
   shadowOffset: {x: -0.3, y: -0.1}
   shadowMaterial: {fileID: 2100000, guid: a216dd9f64da08f4aa57ff6505383b5b, type: 2}
   shadowColor: {r: 0.36245662, g: 0.559, b: 0.5258174, a: 0.078}
+  updatePosition: 1
 --- !u!114 &114681572215777694
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2184,6 +2209,7 @@ MonoBehaviour:
   shadowOffset: {x: -0.3, y: -0.1}
   shadowMaterial: {fileID: 2100000, guid: a216dd9f64da08f4aa57ff6505383b5b, type: 2}
   shadowColor: {r: 0.36245662, g: 0.559, b: 0.5258174, a: 0.078}
+  updatePosition: 1
 --- !u!114 &114684757182142686
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2198,6 +2224,7 @@ MonoBehaviour:
   shadowOffset: {x: -0.3, y: -0.1}
   shadowMaterial: {fileID: 2100000, guid: a216dd9f64da08f4aa57ff6505383b5b, type: 2}
   shadowColor: {r: 0.36245662, g: 0.559, b: 0.5258174, a: 0.078}
+  updatePosition: 1
 --- !u!114 &114716781619017440
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2212,6 +2239,7 @@ MonoBehaviour:
   shadowOffset: {x: -0.3, y: -0.1}
   shadowMaterial: {fileID: 2100000, guid: a216dd9f64da08f4aa57ff6505383b5b, type: 2}
   shadowColor: {r: 0.36245662, g: 0.559, b: 0.5258174, a: 0.078}
+  updatePosition: 1
 --- !u!114 &114725250886398688
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2231,7 +2259,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1005545715192442}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0a8b2ec2e7416c243868fc6588621c8d, type: 3}
   m_Name: 
@@ -2303,6 +2331,7 @@ MonoBehaviour:
   shadowOffset: {x: -0.3, y: -0.1}
   shadowMaterial: {fileID: 2100000, guid: a216dd9f64da08f4aa57ff6505383b5b, type: 2}
   shadowColor: {r: 0.36245662, g: 0.559, b: 0.5258174, a: 0.078}
+  updatePosition: 1
 --- !u!114 &114897373211446116
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2317,6 +2346,7 @@ MonoBehaviour:
   shadowOffset: {x: -0.3, y: -0.1}
   shadowMaterial: {fileID: 2100000, guid: a216dd9f64da08f4aa57ff6505383b5b, type: 2}
   shadowColor: {r: 0.36245662, g: 0.559, b: 0.5258174, a: 0.078}
+  updatePosition: 1
 --- !u!114 &114913233297643720
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2331,6 +2361,7 @@ MonoBehaviour:
   shadowOffset: {x: -0.3, y: -0.1}
   shadowMaterial: {fileID: 2100000, guid: a216dd9f64da08f4aa57ff6505383b5b, type: 2}
   shadowColor: {r: 0.36245662, g: 0.559, b: 0.5258174, a: 0.078}
+  updatePosition: 1
 --- !u!114 &114924017550125124
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2358,6 +2389,7 @@ MonoBehaviour:
   shadowOffset: {x: -0.3, y: -0.1}
   shadowMaterial: {fileID: 2100000, guid: a216dd9f64da08f4aa57ff6505383b5b, type: 2}
   shadowColor: {r: 0.36245662, g: 0.559, b: 0.5258174, a: 0.078}
+  updatePosition: 1
 --- !u!114 &114957128230397578
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2372,6 +2404,7 @@ MonoBehaviour:
   shadowOffset: {x: -0.3, y: -0.1}
   shadowMaterial: {fileID: 2100000, guid: a216dd9f64da08f4aa57ff6505383b5b, type: 2}
   shadowColor: {r: 0.36245662, g: 0.559, b: 0.5258174, a: 0.078}
+  updatePosition: 1
 --- !u!212 &212000786938381644
 SpriteRenderer:
   m_ObjectHideFlags: 1

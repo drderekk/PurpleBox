@@ -75,6 +75,7 @@ MonoBehaviour:
   shadowOffset: {x: 0.3, y: -0.1}
   shadowMaterial: {fileID: 2100000, guid: a216dd9f64da08f4aa57ff6505383b5b, type: 2}
   shadowColor: {r: 0.36245662, g: 0.559, b: 0.5258174, a: 0.078}
+  updatePosition: 0
 --- !u!114 &114236710807413836
 MonoBehaviour:
   m_ObjectHideFlags: 1
