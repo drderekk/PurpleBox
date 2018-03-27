@@ -13,6 +13,7 @@ public class CameraMovement : MonoBehaviour {
 	public int cameraShakeTime;
 	public int cameraShakeIntensity;
 	public Vector3 pointToShakeAround;
+    public float deltaTime = 0f;
 
     private void Start()
     {
@@ -20,7 +21,19 @@ public class CameraMovement : MonoBehaviour {
         StartMove();
     }
 
+    public void printMoveSpeed()
+    {
+        deltaTime += (Time.unscaledDeltaTime - deltaTime) * 0.1f;
+
+        if (Time.fixedTime % 1 == 0)
+        {
+            Debug.Log("MovementSpeed: " + MovementSpeed);
+        }
+
+    }
+
     void Update () {
+        printMoveSpeed();
         if (Move)
         {
 			CameraPosition = gameObject.transform.position;
@@ -29,7 +42,7 @@ public class CameraMovement : MonoBehaviour {
 
             if (MovementSpeed < MaxSpeed)
             {
-                MovementSpeed = MovementSpeed + MovementIncrease;
+                MovementSpeed = MovementSpeed + (MovementIncrease * Time.deltaTime);
             }
 
         }
@@ -41,9 +54,9 @@ public class CameraMovement : MonoBehaviour {
 
     public void StartMove ()
     {
-        MaxSpeed = 0.1f;
+        MaxSpeed = 0.075f;
         MovementSpeed = 0.03f;
-        MovementIncrease = 0.0005f * Time.deltaTime;
+        MovementIncrease = 0.00025f;
         Move = true;
     }
 

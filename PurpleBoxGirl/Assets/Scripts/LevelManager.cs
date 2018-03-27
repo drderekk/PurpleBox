@@ -19,6 +19,7 @@ public class LevelManager : MonoBehaviour {
     private AudioController Audio;
 
     public int Score;
+    public float ScoreTimer = 1.5f;
     private bool PlayerAlive;
 
     private CameraMovement CameraMovement;
@@ -26,11 +27,12 @@ public class LevelManager : MonoBehaviour {
     private Bonus Bonus;
 
     void Start () {
-		// Android
-		#if UNITY_ANDROID
+        // Android
+#if UNITY_ANDROID
 			Screen.orientation = ScreenOrientation.LandscapeLeft;
-		#endif
+#endif
 
+        ScoreTimer = 1.5f;
         Bonus = FindObjectOfType<Bonus>();
         ScoreDisplayCanvas = GameObject.Find("ScoreTextCanvas");
         RespawnCanvas = GameObject.Find("RespawnCanvas");
@@ -48,6 +50,7 @@ public class LevelManager : MonoBehaviour {
 
     public bool IsBoxActive;
 	void Update () {
+        printMoveSpeed();
         if (!Player.gameObject.activeInHierarchy)
         {
             IsBoxActive = false;
@@ -80,6 +83,7 @@ public class LevelManager : MonoBehaviour {
     public IEnumerator RespawnPlayerCo()
     {
         Score = 0;
+        ScoreTimer = 1.5f;
         Player.transform.position = LevelStartPoint.transform.position;
 
 		RespawnCanvas.gameObject.SetActive(false);
@@ -119,12 +123,29 @@ public class LevelManager : MonoBehaviour {
         Audio.Music.Play();
     }
 
+    float deltaTime = 0f;
+
+    public void printMoveSpeed()
+    {
+        deltaTime += (Time.unscaledDeltaTime - deltaTime) * 0.1f;
+
+        if (Time.fixedTime % 1 == 0)
+        {
+            Debug.Log("ScoreIncreasesEvery: " + ScoreTimer + " s.");
+        }
+
+    }
+
     public IEnumerator ScoreCount()
     {
         while (PlayerAlive)
         {
             Score++;
-            yield return new WaitForSecondsRealtime(1.0f);
+            yield return new WaitForSecondsRealtime(ScoreTimer);
+            if (ScoreTimer > 0.75f)
+            {
+                ScoreTimer = ScoreTimer - 0.0075f;
+            }
         }
     }
 }
