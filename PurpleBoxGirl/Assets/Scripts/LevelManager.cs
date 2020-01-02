@@ -131,7 +131,7 @@ public class LevelManager : MonoBehaviour {
 
         if (Time.fixedTime % 1 == 0)
         {
-            Debug.Log("ScoreIncreasesEvery: " + ScoreTimer + " s.");
+            // Debug.Log("ScoreIncreasesEvery: " + ScoreTimer + " s.");
         }
 
     }

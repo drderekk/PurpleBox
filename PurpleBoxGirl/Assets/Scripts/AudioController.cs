@@ -15,7 +15,7 @@ public class AudioController : MonoBehaviour
 
     public AudioSource Music;
 
-    private static bool AudioManagerExists;
+    private static bool AudioManagerExists = false;
 
     void Start()
     {

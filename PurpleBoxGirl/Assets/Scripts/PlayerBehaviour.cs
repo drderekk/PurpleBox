@@ -60,8 +60,7 @@ public class PlayerBehaviour : MonoBehaviour
         Audio = FindObjectOfType<AudioController>();
     }
 
-
-    void Update()
+	void Update()
     {
 		//printFPS();
 

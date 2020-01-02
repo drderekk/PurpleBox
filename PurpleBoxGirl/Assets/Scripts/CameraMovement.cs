@@ -27,7 +27,7 @@ public class CameraMovement : MonoBehaviour {
 
         if (Time.fixedTime % 1 == 0)
         {
-            Debug.Log("MovementSpeed: " + MovementSpeed);
+            //Debug.Log("MovementSpeed: " + MovementSpeed);
         }
 
     }

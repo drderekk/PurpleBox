@@ -3,11 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class KillPlayer : MonoBehaviour {
-
     public LevelManager LevelManager;
     private AudioController Audio;
     public LevelGenerator LevelGenerator;
-
 
     void Start () {
 		LevelManager = GameObject.FindGameObjectWithTag("LevelManager").GetComponent<LevelManager>();
