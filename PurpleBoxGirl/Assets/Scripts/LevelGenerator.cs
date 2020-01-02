@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -21,7 +21,12 @@ public class LevelGenerator : MonoBehaviour {
 
 	void Start () {
 		LevelPos = levelWidth;
-		NextGenerate = levelWidth/2;
+
+		/*
+		 * Next level is generated when camera reaches midpoint of level
+		 */
+		NextGenerate = levelWidth / 2;
+
 		Restart = false;
 
 		for (int i = previouslySeenLevels.Count; i < numberOfPreviousLevelsToTrack; i++)
@@ -34,53 +39,55 @@ public class LevelGenerator : MonoBehaviour {
         if (Restart)
         {
 			Start ();
+			return;
         }
-        else
+
+		generateNextLevel();
+    }
+
+	void generateNextLevel()
+    {
+		float cameraXPos = Mathf.Round(mainCamera.transform.position.x);
+
+		// If camera has passed the position for generating the next level
+		if(cameraXPos > NextGenerate)
         {
-			float CameraPos = Mathf.Round(mainCamera.transform.position.x);
+			int levelIndex = 0;
 
-            if (CameraPos > NextGenerate)
+			int maxNumOfLoops = 20;
+
+			for(int i = 0; i < maxNumOfLoops; i++)
             {
-				bool previouslySeen;
-				int LevelIndex;
+				// Uses random number generator to generate index of next level to generate
+				levelIndex = UnityEngine.Random.Range(0, LevelList.Count);
 
-				int loops = 0;
+				// Exits loop if level index hasn't been recently seen
+                if (!checkIfLevelPreviouslySeen(levelIndex))
+                {
+					break;
+                }
+			}
 
-				/*
-				 * Loops until it finds a level index that isn't stored in
-				 * previouslySeenLevels.
-				 */
-				do {
-					loops++;
+			// Removes the least recent level index from previouslySeenLevels
+			previouslySeenLevels.RemoveAt(0);
 
-					if(loops > 20){
-						break;
-					}
-					previouslySeen = false;
+			// Adds the new level index to previouslySeenLevels
+			previouslySeenLevels.Add(levelIndex);
 
-					LevelIndex = UnityEngine.Random.Range (0, LevelList.Count);
+			// Initialises the new level at the correct position
+			Instantiate(LevelList[levelIndex], new Vector3(LevelPos, 0.0f, 0.0f), new Quaternion(0.0f, 0.0f, 0.0f, 0.0f), transform);
 
-					for (int i = 0; i < previouslySeenLevels.Count; i++) {
-						if(previouslySeenLevels[i] == LevelIndex){
-							previouslySeen = true;
-						}
-					}
+			LevelPos = LevelPos + levelWidth;
+			NextGenerate = NextGenerate + levelWidth;
+		}
+	}
 
-				} while (previouslySeen);
-
-				// Removes the least recent level index from previouslySeenLevels
-				previouslySeenLevels.RemoveAt(0);
-
-				// Adds the new level index to previouslySeenLevels
-				previouslySeenLevels.Add(LevelIndex);
-
-                Instantiate(LevelList[LevelIndex], new Vector3(LevelPos, 0.0f, 0.0f), new Quaternion(0.0f, 0.0f, 0.0f, 0.0f), transform);
-
-				LevelPos = LevelPos + levelWidth;
-
-				NextGenerate = NextGenerate + levelWidth;
-            }
-        }
-
+	/**
+	 * Returns 'true' if a given level index is already stored within
+	 * the 'previouslySeenLevels' list.
+	 */
+	bool checkIfLevelPreviouslySeen(int levelIndex)
+    {
+		return previouslySeenLevels.Contains(levelIndex);
     }
 }

@@ -28,7 +28,7 @@ public class ScoreDisplay : MonoBehaviour
             HiScore = Score;
         }
 
-        HiScoretext.SetText("HiScore: " + HiScore + "%");
+        HiScoretext.SetText("High Score: " + HiScore + "%");
         Scoretext.SetText("Progress: " + Score + "%");
 
     }
