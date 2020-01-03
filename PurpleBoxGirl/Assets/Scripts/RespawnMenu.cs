@@ -20,10 +20,10 @@ public class RespawnMenu : MonoBehaviour
         LevelManager.RespawnPlayer();
     }
 
-    public void QuitGame()
+    public void ReturnToMenu()
     {
         Audio.PlayMenuButtonSound();
-        Application.Quit();
+        SceneManager.LoadScene("Menu");
     }
 
 }
