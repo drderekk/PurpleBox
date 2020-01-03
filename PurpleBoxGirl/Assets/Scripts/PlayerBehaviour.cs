@@ -12,8 +12,8 @@ public class PlayerBehaviour : MonoBehaviour
     public float JumpSpeed;
 
     private AudioController Audio;
-    Rigidbody2D rb;
-    public float PlayerSize;
+    private Rigidbody2D rb;
+    private float PlayerSize;
 
     public bool OnRightWall;
     public bool OnLeftWall;

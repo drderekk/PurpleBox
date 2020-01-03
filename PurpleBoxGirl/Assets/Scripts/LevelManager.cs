@@ -28,9 +28,9 @@ public class LevelManager : MonoBehaviour {
 
     void Start () {
         // Android
-#if UNITY_ANDROID
-			Screen.orientation = ScreenOrientation.LandscapeLeft;
-#endif
+        #if UNITY_ANDROID
+	        Screen.orientation = ScreenOrientation.LandscapeLeft;
+        #endif
 
         ScoreTimer = 1.5f;
         Bonus = FindObjectOfType<Bonus>();
@@ -43,7 +43,8 @@ public class LevelManager : MonoBehaviour {
         Audio = FindObjectOfType<AudioController>();
         CameraStartPoint = Camera.main.transform.position;
         LevelStartPoint = GameObject.Find("StartPoint");
-        Audio.Music.Play();
+
+        Audio.PlayMusic();
         PlayerAlive = true;
         StartCoroutine("ScoreCount");
     }
@@ -51,12 +52,20 @@ public class LevelManager : MonoBehaviour {
     public bool IsBoxActive;
 	void Update () {
         printMoveSpeed();
-        if (!Player.gameObject.activeInHierarchy)
+
+        if (Player.gameObject.activeInHierarchy)
         {
-            IsBoxActive = false;
+            Vector3 playerPos = Player.gameObject.transform.position;
+
+            float playerXToCamera = Camera.main.WorldToScreenPoint(playerPos).x;
+
+            // Kills player if they are past the left or right edge of the camera
+            if (playerXToCamera < -20 || playerXToCamera > Camera.main.pixelWidth + 30)
+            {
+                this.PlayerDeath();
+            }
         }
-        else IsBoxActive = true;
-	}
+    }
 
     public void PlayerDeath ()
     {
@@ -115,16 +124,19 @@ public class LevelManager : MonoBehaviour {
 
         Camera.main.transform.position = CameraStartPoint;
         DestroyLevels();
+
         yield return new WaitForSeconds(0.5f);
-        Audio.Respawn.Play();
+        Audio.PlayRespawnSound();
         Player.gameObject.SetActive(true);
         ScoreDisplayCanvas.gameObject.SetActive(true);
         yield return new WaitForSeconds(0.25f);
+
         LevelGenerator.Restart = true;
         CameraMovement.StartMove();
         PlayerAlive = true;
+
         StartCoroutine("ScoreCount");
-        Audio.Music.Play();
+        Audio.PlayMusic();
     }
 
     float deltaTime = 0f;

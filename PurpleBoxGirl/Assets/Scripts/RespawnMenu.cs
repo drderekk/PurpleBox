@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class RespawnMenu : MonoBehaviour
 {
-
     public LevelManager LevelManager;
     private AudioController Audio;
 
@@ -17,13 +16,13 @@ public class RespawnMenu : MonoBehaviour
 
     public void Respawn()
     {
-        Audio.MenuButton.Play();
+        Audio.PlayMenuButtonSound();
         LevelManager.RespawnPlayer();
     }
 
     public void QuitGame()
     {
-        Audio.MenuButton.Play();
+        Audio.PlayMenuButtonSound();
         Application.Quit();
     }
 

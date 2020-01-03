@@ -9,6 +9,8 @@ public class Bonus : MonoBehaviour {
 
     private LevelManager LevelManager;
 
+    public int BonusScore = 5;
+
     public Sprite Sprite1;
     public Sprite Sprite2;
     public Sprite Sprite3;
@@ -17,9 +19,7 @@ public class Bonus : MonoBehaviour {
     public Vector2 Pos2;
     public Vector3 Pos3;
 
-    public bool IsPos1;
-    public bool IsPos2;
-    public bool IsPos3;
+    private int currentPos;
 
     void Start ()
     {
@@ -29,7 +29,8 @@ public class Bonus : MonoBehaviour {
         Pos3 = gameObject.transform.Find("Pos3").transform.position;
         LevelManager = FindObjectOfType<LevelManager>();
         Sprite = GetComponent<SpriteRenderer>();
-        IsPos1 = true;
+
+        currentPos = 1;
         Sprite.sprite = Sprite1;
     }
 
@@ -38,39 +39,34 @@ public class Bonus : MonoBehaviour {
         gameObject.SetActive(true);
         gameObject.transform.position = Pos1;
         Sprite.sprite = Sprite1;
-        IsPos1 = true;
-        IsPos2 = false;
-        IsPos3 = false;
+
+        currentPos = 1;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.name == "Player")
         {
-            if (IsPos1)
+            switch (currentPos)
             {
-                Audio.Bonus1.Play();
-                gameObject.transform.position = Pos2;
-                Sprite.sprite = Sprite2;
-                IsPos1 = false;
-                IsPos2 = true;
+                case 1:
+                    gameObject.transform.position = Pos2;
+                    Sprite.sprite = Sprite2;
+                    currentPos++;
+                    break;
+                case 2:
+                    gameObject.transform.position = Pos3;
+                    Sprite.sprite = Sprite3;
+                    currentPos++;
+                    break;
+                case 3:
+                    currentPos = 1;
+                    gameObject.SetActive(false);
+                    LevelManager.Score = LevelManager.Score + BonusScore;
+                    break;
             }
-            else if (IsPos2)
-            {
-                Audio.Bonus2.Play();
-                gameObject.transform.position = Pos3;
-                Sprite.sprite = Sprite3;
-                IsPos2 = false;
-                IsPos3 = true;
-            }
-            else if (IsPos3)
-            {
-                Audio.Bonus3.Play();
-                IsPos3 = false;
-                IsPos1 = true;
-                gameObject.SetActive(false);
-                LevelManager.Score = LevelManager.Score + 5;
-            }
+
+            Audio.PlayBonusSound(currentPos);
         }
 
     }

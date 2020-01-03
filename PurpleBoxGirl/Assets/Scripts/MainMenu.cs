@@ -14,13 +14,13 @@ public class MainMenu : MonoBehaviour {
 
     public void PlayGame ()
     {
-        Audio.MenuButton.Play();
+        Audio.PlayMenuButtonSound();
         SceneManager.LoadScene("Scene");
     }
 
     public void QuitGame ()
     {
-        Audio.MenuButton.Play();
+        Audio.PlayMenuButtonSound();
         Application.Quit();
     }
 

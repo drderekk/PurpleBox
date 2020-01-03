@@ -30,23 +30,45 @@ public class AudioController : MonoBehaviour
 
     }
 
-	/*
-	 * Randomises the pitch of the jump sound between 0.7 and 1.2
-	 * before playing the sound.
-	 */
 	public void PlayJumpSound(){
+        // Randomise pitch of jump sound before playing it (Between 0.7 and 1.2)
 		Jump.pitch = 1 + UnityEngine.Random.Range(-3, 2)/10f;
 		Jump.Play();
 	}
 
-	/*
-	 * Randomises the pitch of the death sound between 0.7 and 1.2
-	 * before playing the sound.
-	 */
 	public void PlayDeathSound(){
-		Death.pitch = 1 + UnityEngine.Random.Range(-3, 2)/10f;
+        // Randomise pitch of death sound before playing it (Between 0.7 and 1.2)
+        Death.pitch = 1 + UnityEngine.Random.Range(-3, 2)/10f;
 		Death.Play();
 	}
+
+    public void PlayRespawnSound()
+    {
+        // Randomise pitch of respawn sound before playing it (Between 0.7 and 1.2)
+        Respawn.pitch = 1 + UnityEngine.Random.Range(-3, 2) / 10f;
+        Respawn.Play();
+    }
+
+    public void PlayBonusSound(int bonus)
+    {
+        switch (bonus)
+        {
+            case 1:
+                Bonus1.Play();
+                break;
+            case 2:
+                Bonus2.Play();
+                break;
+            default:
+                Bonus3.Play();
+                break;
+        }
+    }
+
+    public void PlayMenuButtonSound()
+    {
+        MenuButton.Play();
+    }
 
     public void PlayMusic()
     {
