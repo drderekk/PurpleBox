@@ -27,11 +27,6 @@ public class LevelManager : MonoBehaviour {
     private Bonus Bonus;
 
     void Start () {
-        // Android
-        #if UNITY_ANDROID
-	        Screen.orientation = ScreenOrientation.LandscapeLeft;
-        #endif
-
         ScoreTimer = 1.5f;
         Bonus = FindObjectOfType<Bonus>();
         ScoreDisplayCanvas = GameObject.Find("ScoreTextCanvas");
