@@ -19,6 +19,8 @@ public class VolumeSliderHandler : MonoBehaviour
 
         VolumeSlider.onValueChanged.AddListener(delegate { SetVolume(); });
 
+        // Loads current volume percent from local storage (Set to 1 if none set) and sets the volume slider to that value
+        VolumeSlider.value = PlayerPrefs.GetFloat(AudioController.VOLUME_PERCENT_KEY, 1);
         SetVolume();
     }
 

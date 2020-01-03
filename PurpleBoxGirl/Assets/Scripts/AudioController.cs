@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class AudioController : MonoBehaviour
 {
+    public static string VOLUME_PERCENT_KEY = "volume";
+
     public AudioSource Death;
     public AudioSource Respawn;
     public AudioSource Jump;
@@ -29,8 +31,10 @@ public class AudioController : MonoBehaviour
         {
             AudioManagerExists = true;
 
-            UpdateVolumeOfSounds();
+            // Loads current volume percent from local storage (Set to 1 if none set)
+            VolumePercent = PlayerPrefs.GetFloat(VOLUME_PERCENT_KEY, 1);
 
+            UpdateVolumeOfSounds();
             DontDestroyOnLoad(transform.gameObject);
         }
         else
@@ -57,6 +61,9 @@ public class AudioController : MonoBehaviour
     public void UpdateVolumeOfSounds()
     {
         currentVolume = CalculateCurrentVolume();
+
+        // Updates current volume in local storage
+        PlayerPrefs.SetFloat(VOLUME_PERCENT_KEY, currentVolume);
 
         Jump.volume = currentVolume;
         Death.volume = currentVolume;
