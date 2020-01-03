@@ -7799,6 +7799,8 @@ MonoBehaviour:
   Bonus3: {fileID: 1345139905}
   MenuButton: {fileID: 541310380}
   Music: {fileID: 462965847}
+  MaxVolume: 0.25
+  VolumePercent: 1
 --- !u!4 &1233069310
 Transform:
   m_ObjectHideFlags: 0
