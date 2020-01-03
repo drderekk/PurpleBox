@@ -1,0 +1,4 @@
+1. Make sure all audio is played from the audio controller (So that volume can be set)
+2. Put volume options in a settings screen
+3. Particle effects?
+4. Put ads in the game lol

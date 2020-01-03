@@ -60,13 +60,17 @@ public class LevelManager : MonoBehaviour {
 
     public void PlayerDeath ()
     {
+        Audio.FadeOutMusic();
+        Audio.PlayDeathSound();
+
         Player.gameObject.SetActive(false);
         ScoreDisplayCanvas.gameObject.SetActive(false);
+
         PlayerAlive = false;
         CameraMovement.Move = false;
+
 		CameraMovement.shakeCamera(15, 15);
         RespawnCanvas.gameObject.SetActive(true);
-
     }
 
     void DestroyLevels()

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class AudioController : MonoBehaviour
 {
-
     public AudioSource Death;
     public AudioSource Respawn;
     public AudioSource Jump;
@@ -48,4 +47,29 @@ public class AudioController : MonoBehaviour
 		Death.pitch = 1 + UnityEngine.Random.Range(-3, 2)/10f;
 		Death.Play();
 	}
+
+    public void PlayMusic()
+    {
+        Music.Play();
+    }
+
+    public void FadeOutMusic()
+    {
+        StartCoroutine("FadeOutMusicCoroutine");
+    }
+
+
+    public IEnumerator FadeOutMusicCoroutine()
+    {
+        float StartVolume = 0.2f;
+        while (Music.volume > 0)
+        {
+            Music.volume -= StartVolume * Time.deltaTime * 3f;
+
+            yield return null;
+        }
+
+        Music.Stop();
+        Music.volume = 0.2f;
+    }
 }
