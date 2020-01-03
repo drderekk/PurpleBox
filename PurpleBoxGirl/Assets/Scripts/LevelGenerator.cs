@@ -23,9 +23,9 @@ public class LevelGenerator : MonoBehaviour {
 		LevelPos = levelWidth;
 
 		/*
-		 * Next level is generated when camera reaches midpoint of level
+		 * Next level is generated when camera reaches first third of current level
 		 */
-		NextGenerate = levelWidth / 2;
+		NextGenerate = levelWidth / 3;
 
 		Restart = false;
 
