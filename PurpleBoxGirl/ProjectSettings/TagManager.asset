@@ -12,6 +12,7 @@ TagManager:
   - LevelManager
   - LevelGenerator
   - AudioController
+  - PlayerExplosion
   layers:
   - Default
   - TransparentFX
@@ -26,7 +27,7 @@ TagManager:
   - Floor
   - Spikes
   - Pickups
-  - 
+  - Particles
   - 
   - 
   - 

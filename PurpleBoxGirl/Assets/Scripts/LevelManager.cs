@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 
 public class LevelManager : MonoBehaviour {
+    public GameObject PlayerExplosion;
 
     public GameObject LevelStartPoint;
     public Vector3 CameraStartPoint;
@@ -73,7 +74,14 @@ public class LevelManager : MonoBehaviour {
         PlayerAlive = false;
         CameraMovement.Move = false;
 
-		CameraMovement.shakeCamera(15, 15);
+        GameObject explosion = Instantiate(PlayerExplosion, Player.gameObject.transform.position, new Quaternion(0.0f, 0.0f, 0.0f, 0.0f), transform);
+        ParticleSystem explosionParticles = explosion.GetComponent<ParticleSystem>();
+        float totalDuration = explosionParticles.main.duration + explosionParticles.main.startLifetime.constantMax;
+
+        // Destroys player explosion when particle sytem has finished
+        Destroy(explosionParticles, totalDuration);
+
+        CameraMovement.shakeCamera(15, 15);
         RespawnCanvas.gameObject.SetActive(true);
     }
 
