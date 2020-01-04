@@ -855,7 +855,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 8192
+    m_Bits: 8704
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -1300,6 +1300,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dd5796e5e49dde48a74b2598d1a0f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BonusExplosion: {fileID: 2992334867142657255, guid: 280d583c98f007e4baa1c61cc97038a7,
+    type: 3}
   BonusScore: 5
   Sprite1: {fileID: 21300000, guid: 79d70e8aebe32fc4892f9e2cd11aec8e, type: 3}
   Sprite2: {fileID: 21300000, guid: 614505086574a0149aa60fcbb4474f11, type: 3}
@@ -4358,7 +4360,7 @@ GameObject:
   - component: {fileID: 561182348}
   - component: {fileID: 561182347}
   - component: {fileID: 561182352}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15908,7 +15910,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 7991
+    m_Bits: 7479
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
