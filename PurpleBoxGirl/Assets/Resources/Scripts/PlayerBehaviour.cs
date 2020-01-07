@@ -12,8 +12,8 @@ public class PlayerBehaviour : MonoBehaviour
     public float JumpSpeed;
 
     private AudioController Audio;
-    private Rigidbody2D rb;
-    private float PlayerSize;
+    Rigidbody2D rb;
+    public float PlayerSize;
 
     public bool OnRightWall;
     public bool OnLeftWall;
@@ -21,6 +21,8 @@ public class PlayerBehaviour : MonoBehaviour
     public bool GroundTouch;
     public bool LeftTouch;
     public bool RightTouch;
+    public bool LeftNear;
+    public bool RightNear;
     public LayerMask FloorMask;
 
     // Player Sprite stuff
@@ -43,7 +45,7 @@ public class PlayerBehaviour : MonoBehaviour
 	private int currentWallStickTimer = 0;
 
 	private bool wallWasLeft;
-	private int wallJumpDelay = 8;
+	private int wallJumpDelay = 20;
 	private int wallJumpTimer = 0;
 
 	private bool getButtonDownJump;
@@ -60,7 +62,8 @@ public class PlayerBehaviour : MonoBehaviour
         Audio = FindObjectOfType<AudioController>();
     }
 
-	void Update()
+
+    void Update()
     {
 		//printFPS();
 
@@ -86,10 +89,10 @@ public class PlayerBehaviour : MonoBehaviour
 		 *  (Since the player just jumped from a wall) and the player is
 		 *  trying to move towards the wall they just jumped from.
 		 */
-        if (wallJumpTimer > 0){
+        if (wallJumpTimer > 0) {
 			wallJumpTimer--;
 
-			if ((wallWasLeft && xInput < -0.5f) || (!wallWasLeft && xInput > 0.5f)) {
+			if ((wallWasLeft && xInput < -0.5f && getButtonJump && LeftNear) || (!wallWasLeft && xInput > 0.5f && getButtonJump && RightNear)) {
 				xInput = 0f;
 			}
 		}
@@ -189,18 +192,20 @@ public class PlayerBehaviour : MonoBehaviour
     }
 
 	/*
-	 *  Detects what the player is currently touching
+	 *  Detects what the player is currently touching, or if a wall is near it (for jumping)
 	 */
 	private void DetectCollisions(){
 		GroundTouch = (Physics2D.OverlapBox((Vector2)transform.position + new Vector2(PlayerSize, 0.05f), new Vector2(PlayerSize * 1.6f, 0.1f), 0.0f, FloorMask) != null);
 		LeftTouch = (Physics2D.OverlapBox((Vector2)transform.position + new Vector2(-0.005f, PlayerSize), new Vector2(0.01f, PlayerSize), 0.0f, FloorMask) != null);
 		RightTouch = (Physics2D.OverlapBox((Vector2)transform.position + new Vector2((PlayerSize * 2) + 0.005f, PlayerSize), new Vector2(0.01f, PlayerSize), 0.0f, FloorMask) != null);
+        LeftNear = (Physics2D.OverlapBox((Vector2) transform.position + new Vector2(-0.005f, PlayerSize), new Vector2(1.5f, PlayerSize), 0.0f, FloorMask) != null);
+		RightNear = (Physics2D.OverlapBox((Vector2) transform.position + new Vector2((PlayerSize* 2) + 0.005f, PlayerSize), new Vector2(1.5f, PlayerSize), 0.0f, FloorMask) != null);
 	}
 
-	/*
-	 *  Moves the player horizontally based on the given horizontal input
-	 */
-	private void MovePlayerAlongXAxis(float xInput){
+/*
+ *  Moves the player horizontally based on the given horizontal input
+ */
+private void MovePlayerAlongXAxis(float xInput){
 		
 		if (xInput > 0.5f || xInput < -0.5f)
 		{
@@ -229,6 +234,7 @@ public class PlayerBehaviour : MonoBehaviour
 		if (!LeftTouch) {
 			SetOnLeftWallWithDelay(false);
 		} 
+
 		else if (!GroundTouch && xInput < -0.5f) {
 			currentWallStickTimer = wallStickDelay;
 			OnLeftWall = true;
@@ -312,7 +318,7 @@ public class PlayerBehaviour : MonoBehaviour
 
 	/*
 	 * Sets the player's gravity depending on certain conditions and limits
-	 * the player's Y velocity so that it doesn't exceen the Max fall speed.
+	 * the player's Y velocity so that it doesn't exceed the Max fall speed.
 	 */
 	private void SetPlayerGravityAndMaxFallSpeed(){
 		// y axis fall increase
